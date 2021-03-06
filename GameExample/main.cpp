@@ -11,7 +11,7 @@ using namespace DirectX::SimpleMath;
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR, _In_ int nCmdShow)
 {
     Game& game = Game::GetInstance();
-    game.InitializeEngine(hInstance, nCmdShow, L"Сф. и Элл. Пространства", false, false);
+    game.InitializeEngine(hInstance, nCmdShow, L"Sph. & Ell. Spaces", false, false);
     //game.MoveCamera(Vector3(0, 0, -XM_PI / 4));
     game.SetCameraFovY(XM_PI / 2);
     game.SetBackgroundColor(DirectX::Colors::PowderBlue);
@@ -114,10 +114,10 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR, _
 
     SphericalSphere** smallEarthes = new SphericalSphere*[8];
 
-    int smallEarthesSect = 8;
+    int smallEarthesSect = 6;
     for (int i = 0; i < smallEarthesSect; i++)
     {
-        smallEarthes[i] = new SphericalSphere(0.15f, 20, 20, earthTexture, SphericalRotationZW(XM_PIDIV2) * SphericalRotationZW(i * XM_PI / smallEarthesSect));
+        smallEarthes[i] = new SphericalSphere(0.25f, 20, 20, earthTexture, SphericalRotationZW(XM_PIDIV2) * SphericalRotationZW(i * XM_PI / smallEarthesSect));
         smallEarthes[i]->SetVisible(false);
         game.AddMesh(smallEarthes[i]);
     }
