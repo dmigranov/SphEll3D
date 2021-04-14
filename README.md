@@ -1,7 +1,8 @@
 # SphEll3D
 
 **New version of the library is [HERE](https://github.com/dmigranov/NEEngine)**
-**Torus visualization (old) is [HERE](https://github.com/dmigranov/Torus3D)
+
+**Torus visualization (old) is [HERE](https://github.com/dmigranov/Torus3D)**
 
 A library for visualizing scenes in three-dimensional spherical and elliptical spaces. Created using the Direct3D 11 API and the [DirectX Tool Kit](https://github.com/microsoft/DirectXTK).
 
