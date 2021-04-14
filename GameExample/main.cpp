@@ -154,9 +154,9 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR, _
             switch (sceneNum)
             {
             case 0:
-                head1->SetVisible(true);
-                tail1->SetVisible(true);
-                tail2->SetVisible(true);
+                //head1->SetVisible(true);
+                //tail1->SetVisible(true);
+                //tail2->SetVisible(true);
                 sun->SetVisible(true);
                 sunEarth->SetVisible(true);
                 moon->SetVisible(true);
