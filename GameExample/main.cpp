@@ -26,6 +26,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR, _
     //auto earth = new SphericalSphere(0.999999, 35, 35, earthTexture, SphericalRotationYW(3 * XM_PI / 2));
     auto earth = new SphericalSphere(0.92f, 35, 35, earthTexture, SphericalRotationYW(3 * XM_PI / 2));
     game.AddMesh(earth);
+    earth->SetVisible(false);
     
         auto head1 = new SphericalSphere(0.08f, 20, 20, asteroidTexture);
         head1->AddUpdater(Mesh::MeshUpdater([](Matrix in, float delta) {
