@@ -26,7 +26,6 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR, _
     //auto earth = new SphericalSphere(0.999999, 35, 35, earthTexture, SphericalRotationYW(3 * XM_PI / 2));
     auto earth = new SphericalSphere(0.92f, 35, 35, earthTexture, SphericalRotationYW(3 * XM_PI / 2));
     game.AddMesh(earth);
-    earth->SetVisible(false);
     
         auto head1 = new SphericalSphere(0.08f, 20, 20, asteroidTexture);
         head1->AddUpdater(Mesh::MeshUpdater([](Matrix in, float delta) {
@@ -118,7 +117,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR, _
     int smallEarthesSect = 6;
     for (int i = 0; i < smallEarthesSect; i++)
     {
-        smallEarthes[i] = new SphericalSphere(0.25f, 20, 20, earthTexture, SphericalRotationZW(XM_PIDIV2) * SphericalRotationZW(i * XM_PI / smallEarthesSect));
+        smallEarthes[i] = new SphericalSphere(0.25f, 24, 24, earthTexture, SphericalRotationZW(XM_PIDIV2) * SphericalRotationZW(i * XM_PI / smallEarthesSect));
         smallEarthes[i]->SetVisible(false);
         game.AddMesh(smallEarthes[i]);
     }
